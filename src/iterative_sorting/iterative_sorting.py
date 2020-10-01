@@ -24,11 +24,10 @@ def bubble_sort(arr):
     # Your code here
     for i in range(len(arr) - 1, 0, -1):  # loop through the entire array backwards
         for j in range(i):  # while that's happening, loop through it again
-            if arr[j] > arr[j+1]:  # if the value of j is greater than the value of j's neighbor
-                temp_value = arr[j]
-                arr[j] = arr[j+1]
-                arr[j+1] = temp_value
-
+            if arr[j] > arr[j+1]:  # if the value of j is greater than the value of j's neighbor to the RIGHT
+                temp_value = arr[j]  # then we'll put j in a temp variable
+                arr[j] = arr[j+1]  # and swap it with it's neighbor
+                arr[j+1] = temp_value  # and assign the temp value to the neighbors position
     return arr
 
 
