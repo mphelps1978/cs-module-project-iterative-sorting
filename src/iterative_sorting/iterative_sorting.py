@@ -8,13 +8,13 @@ def selection_sort(arr):
         # (hint, can do in 3 loc)
         # Your code here
 
-        for b in range(cur_index + 1, len(arr)):
-            if arr[b] < arr[smallest_index]:
-                smallest_index = b
+        for b in range(cur_index + 1, len(arr)):  # loop through the array again
+            if arr[b] < arr[smallest_index]:  # if array at index b is less than the current smallest index
+                smallest_index = b  # reassiign smallest index
 
         # TO-DO: swap
         # Your code here
-        arr[smallest_index], arr[cur_index] = arr[cur_index], arr[smallest_index]
+        arr[smallest_index], arr[cur_index] = arr[cur_index], arr[smallest_index]  # swaap smallest_index and current_index
 
     return arr
 
@@ -22,6 +22,12 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
     # Your code here
+    for i in range(len(arr) - 1, 0, -1):  # loop through the entire array backwards
+        for j in range(i):  # while that's happening, loop through it again
+            if arr[j] > arr[j+1]:  # if the value of j is greater than the value of j's neighbor
+                temp_value = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp_value
 
     return arr
 
